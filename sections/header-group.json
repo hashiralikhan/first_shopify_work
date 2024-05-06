@@ -47,13 +47,21 @@
     "first_work_MnHEdG": {
       "type": "first-work",
       "settings": {
-        "title": "xcvcb"
+        "title": "xcvcb",
+        "title_padding": 21,
+        "title_margin": 15,
+        "title_font_weight": "bold",
+        "title_color": "#1773b0"
       }
     },
     "first_work_kUrRkq": {
       "type": "first-work",
       "settings": {
-        "title": "vxcvbvcn"
+        "title": "vxcvbvcn",
+        "title_padding": 10,
+        "title_margin": 20,
+        "title_font_weight": "normal",
+        "title_color": "#333333"
       }
     }
   },
