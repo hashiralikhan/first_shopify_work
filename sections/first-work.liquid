@@ -1,20 +1,70 @@
-<h1>{{ section.settings.title }}</h1>
-<h1>  </h1>
+<div class="custom-section">
+    {% assign title_style = '' %}
+    {% if section.settings.title_padding %}
+        {% assign title_style = title_style | append: 'padding: ' | append: section.settings.title_padding | append: 'px; ' %}
+    {% endif %}
+    {% if section.settings.title_margin %}
+        {% assign title_style = title_style | append: 'margin: ' | append: section.settings.title_margin | append: 'px; ' %}
+    {% endif %}
+    {% if section.settings.title_font_weight %}
+        {% assign title_style = title_style | append: 'font-weight: ' | append: section.settings.title_font_weight | append: '; ' %}
+    {% endif %}
+    {% if section.settings.title_color %}
+        {% assign title_style = title_style | append: 'color: ' | append: section.settings.title_color | append: '; ' %}
+    {% endif %}
 
- {% schema %}
+    <h1 style="{{ title_style }}">{{ section.settings.title }}</h1>
+    https://nutrali.com/
+</div>
+{% schema %} 
 {
-    "name": "first-work",
-    "settings": [
-        {
-            "type": "text",
-            "id": "title",
-            "label": "This is heading"
-        }
-        ],
-        "presets": [
-        {
-         "name": "first Work" 
-        }
-      ]
+  "name": "first-work",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "number",
+      "id": "title_padding",
+      "label": "Title Padding (px)",
+      "default": 10
+    },
+    {
+      "type": "number",
+      "id": "title_margin",
+      "label": "Title Margin (px)",
+      "default": 20
+    },
+    {
+      "type": "select",
+      "id": "title_font_weight",
+      "label": "Title Font Weight",
+      "options": [
+        { "value": "normal", "label": "Normal" },
+        { "value": "bold", "label": "Bold" }
+      ],
+      "default": "normal"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#333333"
+    }
+  ],
+  "blocks": [
+    {
+        
+    }
+  ],
+  "presets": [
+    {
+      "name": "First Work",
+      "category": "Custom"
+    }
+  ]
 }
-{% endschema %} 
+
+{% endschema %}
