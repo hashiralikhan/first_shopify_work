@@ -47,13 +47,20 @@
     "first_work_MnHEdG": {
       "type": "first-work",
       "settings": {
-        "title": ""
+        "title": "xcvcb"
+      }
+    },
+    "first_work_kUrRkq": {
+      "type": "first-work",
+      "settings": {
+        "title": "vxcvbvcn"
       }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "first_work_MnHEdG"
+    "first_work_MnHEdG",
+    "first_work_kUrRkq"
   ]
 }
