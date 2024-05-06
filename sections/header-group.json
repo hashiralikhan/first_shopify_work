@@ -50,7 +50,6 @@
         "image_6WnX8Y": {
           "type": "image",
           "settings": {
-            "section_image": "shopify:\/\/shop_images\/Pirates2-disneyscreencaps.com-14370.jpg"
           }
         }
       },
@@ -67,6 +66,16 @@
     },
     "first_work_kUrRkq": {
       "type": "first-work",
+      "blocks": {
+        "image_8my6Ek": {
+          "type": "image",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "image_8my6Ek"
+      ],
       "settings": {
         "title": "vxcvbvcn",
         "title_padding": 10,
