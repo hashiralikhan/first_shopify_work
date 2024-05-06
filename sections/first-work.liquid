@@ -20,6 +20,19 @@
 {% schema %} 
 {
   "name": "first-work",
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "section_image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
   "settings": [
     {
       "type": "text",
@@ -55,9 +68,6 @@
       "default": "#333333"
     }
   ],
-    "blocks": [
-    
-  ],
   "presets": [
     {
       "name": "First Work",
@@ -65,5 +75,6 @@
     }
   ]
 }
+
 
 {% endschema %}
