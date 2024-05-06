@@ -15,7 +15,8 @@
 
     <h1 style="{{ title_style }}">{{ section.settings.title }}</h1>
   {% for block in section.blocks %}
-  <img src="{{ block.settings.section_image | img_url: '1024x1024' }}" alt="Image Description">
+  <div class="image-container" style="background-image: url('{{ block.settings.section_image | img_url: '1024x1024' }}');">
+  </div>
   {% endfor %}
 </div>
 {% schema %} 
