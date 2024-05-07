@@ -14,11 +14,28 @@
     {% endif %}
 
     <h1 style="{{ title_style }}">{{ section.settings.title }}</h1>
-    <a href="https://nutrali.com/">hffgf</a>
+  {% for block in section.blocks %}
+  <div class="hero-section" style="background-image: url('{{ block.settings.background_image | img_url: 'master' }}');"><h1 style="{{ title_style }}">{{ section.settings.title }}</h1></div>
+    <!-- <img src="{{ block.settings.background_image | img_url: '1024x1024' }}">  -->
+ 
+  {% endfor %}
 </div>
 {% schema %} 
 {
   "name": "first-work",
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "background_image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
   "settings": [
     {
       "type": "text",
@@ -54,11 +71,6 @@
       "default": "#333333"
     }
   ],
-  "blocks": [
-    {
-        
-    }
-  ],
   "presets": [
     {
       "name": "First Work",
@@ -66,5 +78,6 @@
     }
   ]
 }
+
 
 {% endschema %}
