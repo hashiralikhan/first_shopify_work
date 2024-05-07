@@ -1,83 +1,102 @@
 <div class="custom-section">
+  {% assign container_style = '' %}
+  {% if section.settings.container_width %}
+    {% assign container_style = container_style | append: 'width: ' | append: section.settings.container_width | append: 'px; ' %}
+  {% endif %}
+  {% if section.settings.container_height %}
+    {% assign container_style = container_style | append: 'height: ' | append: section.settings.container_height | append: 'px; ' %}
+  {% endif %}
+
+  <div class="container" style="{{ container_style }}">
     {% assign title_style = '' %}
     {% if section.settings.title_padding %}
-        {% assign title_style = title_style | append: 'padding: ' | append: section.settings.title_padding | append: 'px; ' %}
+      {% assign title_style = title_style | append: 'padding: ' | append: section.settings.title_padding | append: 'px; ' %}
     {% endif %}
     {% if section.settings.title_margin %}
-        {% assign title_style = title_style | append: 'margin: ' | append: section.settings.title_margin | append: 'px; ' %}
+      {% assign title_style = title_style | append: 'margin: ' | append: section.settings.title_margin | append: 'px; ' %}
     {% endif %}
     {% if section.settings.title_font_weight %}
-        {% assign title_style = title_style | append: 'font-weight: ' | append: section.settings.title_font_weight | append: '; ' %}
+      {% assign title_style = title_style | append: 'font-weight: ' | append: section.settings.title_font_weight | append: '; ' %}
     {% endif %}
     {% if section.settings.title_color %}
-        {% assign title_style = title_style | append: 'color: ' | append: section.settings.title_color | append: '; ' %}
+      {% assign title_style = title_style | append: 'color: ' | append: section.settings.title_color | append: '; ' %}
     {% endif %}
+    <h1 style="{{ title_style }}">{{ section.settings.title }}</h1>
+    <button>{{ section.settings.button_text }}</button>
+  </div>
 
-    <!-- <h1 style="{{ title_style }}">{{ section.settings.title }}</h1> -->
   {% for block in section.blocks %}
-  <div class="hero-section" style="background-image: url('{{ block.settings.background_image | img_url: 'master' }}');"><h1 style="{{ title_style }}">{{ section.settings.title }}</h1></div>
-    <!-- <img src="{{ block.settings.background_image | img_url: '1024x1024' }}">  -->
- 
+    <div class="hero-section" style="background-image: url('{{ block.settings.background_image | img_url: 'master' }}');">
+      <!-- This is where individual block content can go -->
+    </div>
   {% endfor %}
 </div>
-{% schema %} 
-{
-  "name": "first-work",
-  "blocks": [
-    {
-      "type": "image",
-      "name": "Image",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "background_image",
-          "label": "Image"
-        }
-      ]
-    }
-  ],
+{% schema %}
+
+  {
+  "name": "Custom Section",
   "settings": [
     {
-      "type": "text",
-      "id": "title",
-      "label": "Title"
+      "type": "header",
+      "content": "Container Settings"
+    },
+    {
+      "type": "number",
+      "id": "container_width",
+      "label": "Container Width (px)"
+    },
+    {
+      "type": "number",
+      "id": "container_height",
+      "label": "Container Height (px)"
+    },
+    {
+      "type": "header",
+      "content": "Title Settings"
     },
     {
       "type": "number",
       "id": "title_padding",
-      "label": "Title Padding (px)",
-      "default": 10
+      "label": "Title Padding (px)"
     },
     {
       "type": "number",
       "id": "title_margin",
-      "label": "Title Margin (px)",
-      "default": 20
+      "label": "Title Margin (px)"
+    },
+    {
+      "type": "text",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#000000"
     },
     {
       "type": "select",
       "id": "title_font_weight",
       "label": "Title Font Weight",
       "options": [
-        { "value": "normal", "label": "Normal" },
-        { "value": "bold", "label": "Bold" }
+        {"value": "normal", "label": "Normal"},
+        {"value": "bold", "label": "Bold"}
       ],
       "default": "normal"
     },
     {
-      "type": "color",
-      "id": "title_color",
-      "label": "Title Color",
-      "default": "#333333"
+      "type": "header",
+      "content": "Button Settings"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Button"
     }
   ],
   "presets": [
     {
-      "name": "First Work",
-      "category": "Custom"
+      "name": "Custom Section",
+      "category": "Sections"
     }
   ]
 }
-
 
 {% endschema %}
