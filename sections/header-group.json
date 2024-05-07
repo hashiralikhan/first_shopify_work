@@ -49,7 +49,9 @@
       "settings": {
         "background_image": "shopify:\/\/shop_images\/BG__3_e2eae0a8-33aa-41b0-a40b-35b0431b365a.jpg",
         "title": "great",
-        "button_text": "submit"
+        "button_text": "submit",
+        "section_width": 1027,
+        "section_height": 500
       }
     }
   },
