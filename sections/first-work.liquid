@@ -13,7 +13,7 @@
         {% assign title_style = title_style | append: 'color: ' | append: section.settings.title_color | append: '; ' %}
     {% endif %}
 
-    <h1 style="{{ title_style }}">{{ section.settings.title }}</h1>
+    <!-- <h1 style="{{ title_style }}">{{ section.settings.title }}</h1> -->
   {% for block in section.blocks %}
   <div class="hero-section" style="background-image: url('{{ block.settings.background_image | img_url: 'master' }}');"><h1 style="{{ title_style }}">{{ section.settings.title }}</h1></div>
     <!-- <img src="{{ block.settings.background_image | img_url: '1024x1024' }}">  -->
