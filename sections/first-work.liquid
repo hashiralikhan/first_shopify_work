@@ -1,5 +1,4 @@
 <div class="custom-section" style="background-image: url('{{ section.settings.background_image | img_url: 'master'}}');">
-  <!-- <div class="custom-section" style="background-image: url('{{ block.settings.background_image | img_url: 'master' }}');"> -->
   <div class="container">
     <h1>{{ section.settings.title }}</h1>
     <button>{{ section.settings.button_text }}</button>
@@ -8,7 +7,7 @@
 
 {% schema %}
 
-  {
+ {
   "name": "Custom Section",
   "settings": [
     {
@@ -37,6 +36,22 @@
       "type": "text",
       "id": "button_text",
       "label": "Button Text"
+    },
+    {
+      "type": "header",
+      "content": "Custom Section Dimensions"
+    },
+    {
+      "type": "number",
+      "id": "section_width",
+      "label": "Section Width (px)",
+      "default": 1000
+    },
+    {
+      "type": "number",
+      "id": "section_height",
+      "label": "Section Height (px)",
+      "default": 500
     }
   ],
   "presets": [
@@ -46,5 +61,6 @@
     }
   ]
 }
+
 
 {% endschema %}
