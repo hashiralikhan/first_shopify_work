@@ -64,33 +64,11 @@
         "title_font_weight": "bold",
         "title_color": "#1773b0"
       }
-    },
-    "first_work_kUrRkq": {
-      "type": "first-work",
-      "blocks": {
-        "image_8my6Ek": {
-          "type": "image",
-          "settings": {
-            "background_image": "shopify:\/\/shop_images\/Pirates2-disneyscreencaps.com-14370.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "image_8my6Ek"
-      ],
-      "settings": {
-        "title": "vxcvbvcn",
-        "title_padding": 10,
-        "title_margin": 20,
-        "title_font_weight": "normal",
-        "title_color": "#333333"
-      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "first_work_MnHEdG",
-    "first_work_kUrRkq"
+    "first_work_MnHEdG"
   ]
 }
