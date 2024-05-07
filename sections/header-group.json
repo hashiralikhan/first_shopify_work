@@ -46,23 +46,10 @@
     },
     "first_work_MnHEdG": {
       "type": "first-work",
-      "blocks": {
-        "image_6WnX8Y": {
-          "type": "image",
-          "settings": {
-            "background_image": "shopify:\/\/shop_images\/BG__3_e2eae0a8-33aa-41b0-a40b-35b0431b365a.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "image_6WnX8Y"
-      ],
       "settings": {
-        "title": "xcvcb",
-        "title_padding": 21,
-        "title_margin": 15,
-        "title_font_weight": "bold",
-        "title_color": "#1773b0"
+        "background_image": "shopify:\/\/shop_images\/BG__3_e2eae0a8-33aa-41b0-a40b-35b0431b365a.jpg",
+        "title": "great",
+        "button_text": "submit"
       }
     }
   },
